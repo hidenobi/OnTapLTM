@@ -5,12 +5,16 @@
 package rmi2208;
 
 import java.rmi.*;
+import java.rmi.registry.*;
+
 /**
  *
  * @author TuanVH
  */
 public class ServerRMI {
-    public static void main(String[] args) throws Exception{
+
+    public static void main(String[] args) throws Exception {
+        LocateRegistry.createRegistry(2020);
         CustomStudent customStudent = new CustomStudent();
         Naming.rebind("rmi://localhost/custom", customStudent);
     }
