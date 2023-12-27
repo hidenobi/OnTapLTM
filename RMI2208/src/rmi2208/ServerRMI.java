@@ -14,8 +14,8 @@ import java.rmi.registry.*;
 public class ServerRMI {
 
     public static void main(String[] args) throws Exception {
-        LocateRegistry.createRegistry(2020);
+        LocateRegistry.createRegistry(1999);
         CustomStudent customStudent = new CustomStudent();
-        Naming.rebind("rmi://localhost/custom", customStudent);
+        Naming.rebind("rmi://localhost:1999/custom", customStudent);
     }
 }

@@ -18,7 +18,7 @@ import java.net.InetAddress;
 public class Main {
 
     public static int port = 2209;
-    public static String address = "192.168.137.1";
+    public static String address = "localhost";
 
     public static void main(String[] args) throws Exception {
         System.out.println("Client is running");

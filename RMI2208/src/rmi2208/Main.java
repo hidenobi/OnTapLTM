@@ -16,7 +16,7 @@ import java.util.Collections;
 public class Main {
     
     public static void main(String[] args) throws Exception {
-        HandleStudent customStudent = (HandleStudent) Naming.lookup("rmi://localhost/custom");
+        HandleStudent customStudent = (HandleStudent) Naming.lookup("rmi://localhost:1999/custom");
         String request = customStudent.getNumber("B20DCCN622;2208");
         String[] li = request.split("\\;");
         String id = li[0];
